@@ -357,54 +357,359 @@
             font-weight: 600;
         }
 
-        /* Mobile specific adjustments */
-        @media (max-width: 768px) {
-            .main-container {
-                padding: 0.5rem;
-            }
-            
-            .company-name {
-                margin-bottom: 1.5rem;
-            }
-            
-            @keyframes welderPath {
-                0%, 100% {
-                    transform: translate(-50%, -50%) translateX(-80px) translateY(-20px) scale(0.7);
-                }
-                25% {
-                    transform: translate(-50%, -50%) translateX(-40px) translateY(-10px) scale(0.9);
-                }
-                50% {
-                    transform: translate(-50%, -50%) translateX(40px) translateY(-10px) scale(0.9);
-                }
-                75% {
-                    transform: translate(-50%, -50%) translateX(80px) translateY(-20px) scale(0.7);
-                }
-            }
+        /* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+    .company-name {
+        font-size: clamp(1.6rem, 5.5vw, 3.5rem);
+    }
+    
+    @keyframes welderPath {
+        0%, 100% {
+            transform: translate(-50%, -50%) translateX(-100px) translateY(-25px) scale(0.75);
         }
-
-        @media (max-width: 480px) {
-            .construction-message {
-                flex-direction: column;
-                gap: 0.3rem;
-            }
-            
-            @keyframes welderPath {
-                0%, 100% {
-                    transform: translate(-50%, -50%) translateX(-60px) translateY(-15px) scale(0.6);
-                }
-                25% {
-                    transform: translate(-50%, -50%) translateX(-30px) translateY(-8px) scale(0.8);
-                }
-                50% {
-                    transform: translate(-50%, -50%) translateX(30px) translateY(-8px) scale(0.8);
-                }
-                75% {
-                    transform: translate(-50%, -50%) translateX(60px) translateY(-15px) scale(0.6);
-                }
-            }
+        25% {
+            transform: translate(-50%, -50%) translateX(-50px) translateY(-12px) scale(0.95);
         }
+        50% {
+            transform: translate(-50%, -50%) translateX(50px) translateY(-12px) scale(0.95);
+        }
+        75% {
+            transform: translate(-50%, -50%) translateX(100px) translateY(-25px) scale(0.75);
+        }
+    }
+}
 
+@media (max-width: 992px) {
+    .main-container {
+        padding: 0.8rem;
+    }
+    
+    .company-name {
+        font-size: clamp(1.4rem, 5vw, 3rem);
+        margin-bottom: 1.8rem;
+    }
+    
+    .tagline {
+        font-size: clamp(0.85rem, 2.3vw, 1.1rem);
+        margin-bottom: 1.8rem;
+    }
+    
+    .description {
+        font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+        margin-bottom: 1.8rem;
+    }
+    
+    @keyframes welderPath {
+        0%, 100% {
+            transform: translate(-50%, -50%) translateX(-85px) translateY(-22px) scale(0.7);
+        }
+        25% {
+            transform: translate(-50%, -50%) translateX(-42px) translateY(-11px) scale(0.9);
+        }
+        50% {
+            transform: translate(-50%, -50%) translateX(42px) translateY(-11px) scale(0.9);
+        }
+        75% {
+            transform: translate(-50%, -50%) translateX(85px) translateY(-22px) scale(0.7);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        padding: 0.6rem;
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+    
+    .company-name {
+        font-size: clamp(1.2rem, 4.5vw, 2.5rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .company-name .line {
+        margin: 0.2rem 0;
+    }
+    
+    .tagline {
+        font-size: clamp(0.8rem, 2.1vw, 1rem);
+        margin-bottom: 1.5rem;
+    }
+    
+    .description {
+        font-size: clamp(0.7rem, 1.7vw, 0.9rem);
+        margin-bottom: 1.5rem;
+        max-width: min(550px, 95vw);
+    }
+    
+    .construction-message {
+        font-size: clamp(0.9rem, 2.8vw, 1.4rem);
+        margin-bottom: 1.2rem;
+    }
+    
+    .progress-container {
+        width: min(350px, 90vw);
+        margin-bottom: 1.2rem;
+    }
+    
+    .progress-label {
+        font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+    }
+    
+    .contact-info {
+        font-size: clamp(0.65rem, 1.8vw, 0.85rem);
+    }
+    
+    @keyframes welderPath {
+        0%, 100% {
+            transform: translate(-50%, -50%) translateX(-70px) translateY(-18px) scale(0.65);
+        }
+        25% {
+            transform: translate(-50%, -50%) translateX(-35px) translateY(-9px) scale(0.85);
+        }
+        50% {
+            transform: translate(-50%, -50%) translateX(35px) translateY(-9px) scale(0.85);
+        }
+        75% {
+            transform: translate(-50%, -50%) translateX(70px) translateY(-18px) scale(0.65);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        padding: 0.5rem;
+        padding-top: 1.5rem;
+    }
+    
+    .company-name {
+        font-size: clamp(1rem, 4vw, 2rem);
+        margin-bottom: 1.2rem;
+        max-width: 95vw;
+    }
+    
+    .tagline {
+        font-size: clamp(0.75rem, 2vw, 0.9rem);
+        margin-bottom: 1.2rem;
+        line-height: 1.3;
+    }
+    
+    .description {
+        font-size: clamp(0.65rem, 1.6vw, 0.8rem);
+        margin-bottom: 1.2rem;
+        line-height: 1.5;
+    }
+    
+    .construction-message {
+        font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+        flex-direction: column;
+        gap: 0.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .progress-container {
+        width: min(300px, 95vw);
+        margin-bottom: 1rem;
+    }
+    
+    .progress-bar {
+        height: 8px;
+    }
+    
+    @keyframes welderPath {
+        0%, 100% {
+            transform: translate(-50%, -50%) translateX(-55px) translateY(-15px) scale(0.6);
+        }
+        25% {
+            transform: translate(-50%, -50%) translateX(-28px) translateY(-7px) scale(0.8);
+        }
+        50% {
+            transform: translate(-50%, -50%) translateX(28px) translateY(-7px) scale(0.8);
+        }
+        75% {
+            transform: translate(-50%, -50%) translateX(55px) translateY(-15px) scale(0.6);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .company-name {
+        font-size: clamp(0.9rem, 3.8vw, 1.8rem);
+        letter-spacing: -0.01em;
+    }
+    
+    .tagline {
+        font-size: clamp(0.7rem, 1.9vw, 0.85rem);
+    }
+    
+    .description {
+        font-size: clamp(0.6rem, 1.5vw, 0.75rem);
+    }
+    
+    .construction-message {
+        font-size: clamp(0.75rem, 2.3vw, 1.1rem);
+    }
+    
+    .progress-container {
+        width: min(280px, 98vw);
+    }
+    
+    .contact-info {
+        font-size: clamp(0.6rem, 1.6vw, 0.8rem);
+    }
+    
+    @keyframes welderPath {
+        0%, 100% {
+            transform: translate(-50%, -50%) translateX(-45px) translateY(-12px) scale(0.55);
+        }
+        25% {
+            transform: translate(-50%, -50%) translateX(-22px) translateY(-6px) scale(0.75);
+        }
+        50% {
+            transform: translate(-50%, -50%) translateX(22px) translateY(-6px) scale(0.75);
+        }
+        75% {
+            transform: translate(-50%, -50%) translateX(45px) translateY(-12px) scale(0.55);
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .main-container {
+        padding: 0.3rem;
+        padding-top: 1rem;
+    }
+    
+    .company-name {
+        font-size: clamp(0.8rem, 3.5vw, 1.6rem);
+        margin-bottom: 1rem;
+    }
+    
+    .tagline {
+        font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+        margin-bottom: 1rem;
+    }
+    
+    .description {
+        font-size: clamp(0.55rem, 1.4vw, 0.7rem);
+        margin-bottom: 1rem;
+    }
+    
+    .construction-message {
+        font-size: clamp(0.7rem, 2.2vw, 1rem);
+        margin-bottom: 0.8rem;
+    }
+    
+    .progress-container {
+        width: min(260px, 98vw);
+        margin-bottom: 0.8rem;
+    }
+    
+    @keyframes welderPath {
+        0%, 100% {
+            transform: translate(-50%, -50%) translateX(-35px) translateY(-10px) scale(0.5);
+        }
+        25% {
+            transform: translate(-50%, -50%) translateX(-18px) translateY(-5px) scale(0.7);
+        }
+        50% {
+            transform: translate(-50%, -50%) translateX(18px) translateY(-5px) scale(0.7);
+        }
+        75% {
+            transform: translate(-50%, -50%) translateX(35px) translateY(-10px) scale(0.5);
+        }
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .main-container {
+        padding: 0.5rem;
+        justify-content: center;
+    }
+    
+    .company-name {
+        font-size: clamp(1rem, 4vh, 2rem);
+        margin-bottom: 0.8rem;
+    }
+    
+    .tagline {
+        font-size: clamp(0.7rem, 2vh, 1rem);
+        margin-bottom: 0.8rem;
+    }
+    
+    .description {
+        font-size: clamp(0.6rem, 1.8vh, 0.9rem);
+        margin-bottom: 0.8rem;
+    }
+    
+    .construction-section {
+        margin-bottom: 0.5rem;
+    }
+    
+    .construction-message {
+        font-size: clamp(0.8rem, 2.5vh, 1.2rem);
+        margin-bottom: 0.6rem;
+    }
+    
+    .progress-container {
+        margin-bottom: 0.6rem;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .welding-arc {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.9);
+    }
+    
+    .spark {
+        box-shadow: 0 0 6px #fbbf24;
+    }
+    
+    .company-name .letter.welded {
+        filter: drop-shadow(0 0 18px rgba(251, 191, 36, 0.7)) !important;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .welder {
+        animation-duration: 20s;
+    }
+    
+    .grid-background {
+        animation: none;
+    }
+    
+    .floating-element {
+        animation-duration: 12s;
+    }
+    
+    .spark {
+        animation-duration: 2s;
+    }
+}
+
+/* Print styles */
+@media print {
+    .grid-background,
+    .floating-elements,
+    .welder,
+    .welding-sparks {
+        display: none;
+    }
+    
+    .main-container {
+        color: #000;
+        background: #fff;
+    }
+    
+    .company-name .letter {
+        color: #000 !important;
+        -webkit-text-fill-color: #000 !important;
+    }
+}
         /* Ensure text stays visible */
         .company-name .letter:not(.welded) {
             opacity: 1 !important;
